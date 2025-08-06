@@ -1,0 +1,106 @@
+/* style.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 100px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  letter-spacing: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  scroll-snap-align: start;
+  padding: 4rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  letter-spacing: 2px;
+}
+
+.reveal {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.tilt {
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.2s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.tilt:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  margin: 10px 5px;
+  width: 250px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00ffff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00cccc;
+}
+
+/* Background glitch canvas */
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 90%;
+  }
+}
+
